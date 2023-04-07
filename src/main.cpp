@@ -31,17 +31,17 @@ void setup() {
 
 void loop() {
   // Verifique se o pino 34 está com nível lógico alto
-  if (digitalRead(pin34) == HIGH) {
+  //if (digitalRead(pin34) == HIGH) {
     // Faça a requisição HTTP POST
     WiFiClient client;
     HTTPClient http;
-    http.begin(client, "https://www.example.com"); // Substitua com a URL desejada
+    http.begin(client, "http://192.168.0.17:5900/incidences"); // Substitua com a URL desejada
     http.addHeader("Content-Type", "application/json");
 
     // Crie um novo objeto JSON com nome e idade
     DynamicJsonDocument jsonPayload(1024);
-    jsonPayload["nome"] = "Willyan";
-    jsonPayload["idade"] = 23;
+    jsonPayload["IdShark"] = "5";
+    jsonPayload["Name"] = "Willyan";
 
     // Serialize o objeto JSON como uma string
     String jsonStr;
@@ -59,7 +59,7 @@ void loop() {
     }
 
     http.end();
-  }
-
+  //}
+  delay(20000);
   // Nada a fazer no loop principal
 }
