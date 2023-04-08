@@ -41,17 +41,7 @@ void loop() {
     // Crie um novo objeto JSON com nome e idade
     DynamicJsonDocument jsonPayload(1024);
     jsonPayload["ChipNumber"] = "58479826";
-    delay(30000);
-    jsonPayload["ChipNumber"] = "13482823";
-    delay(30000);
-    jsonPayload["ChipNumber"] = "15489823";
-    delay(60000);
-    jsonPayload["ChipNumber"] = "78591204";
-    delay(30000);
-    jsonPayload["ChipNumber"] = "48519856";
-    delay(120000);
-    jsonPayload["ChipNumber"] = "15087418";
-    delay(240000);
+    //delay(30000);
 
     // Serialize o objeto JSON como uma string
     String jsonStr;
@@ -70,6 +60,6 @@ void loop() {
 
     http.end();
   //}
-  delay(20000);
+  delay(10000);
   // Nada a fazer no loop principal
 }
