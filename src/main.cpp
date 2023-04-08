@@ -7,8 +7,8 @@
 // const char* ssid = "Willyan's Galaxy S20 FE";
 // const char* password = "123456789";
 
-const char* ssid = "brisa-2908314";
-const char* password = "dqszdq8h";
+const char* ssid = "Willyan's Galaxy S20 FE";
+const char* password = "123456789";
 
 // Pino de entrada para verificar o nível lógico
 const int pin34 = 34;
@@ -35,13 +35,23 @@ void loop() {
     // Faça a requisição HTTP POST
     WiFiClient client;
     HTTPClient http;
-    http.begin(client, "http://192.168.0.17:5900/incidences"); // Substitua com a URL desejada
+    http.begin(client, "http://ec2-3-14-134-94.us-east-2.compute.amazonaws.com:5900/incidences"); // Substitua com a URL desejada
     http.addHeader("Content-Type", "application/json");
 
     // Crie um novo objeto JSON com nome e idade
     DynamicJsonDocument jsonPayload(1024);
-    jsonPayload["IdShark"] = "5";
-    jsonPayload["Name"] = "Willyan";
+    jsonPayload["ChipNumber"] = "58479826";
+    delay(30000);
+    jsonPayload["ChipNumber"] = "13482823";
+    delay(30000);
+    jsonPayload["ChipNumber"] = "15489823";
+    delay(60000);
+    jsonPayload["ChipNumber"] = "78591204";
+    delay(30000);
+    jsonPayload["ChipNumber"] = "48519856";
+    delay(120000);
+    jsonPayload["ChipNumber"] = "15087418";
+    delay(240000);
 
     // Serialize o objeto JSON como uma string
     String jsonStr;
