@@ -77,7 +77,7 @@ while (WiFi.status() != WL_CONNECTED) {
     }
   }
 
-String numbers[] = {"58479826", "15489823", "58479826", "13482823", "58479826","13482823", "78591204"};
+String numbers[] = {"13482823","13482823", "78591204", "13482823", "78591204"};
 
 for (String number : numbers) {
   sendRequest(number);
