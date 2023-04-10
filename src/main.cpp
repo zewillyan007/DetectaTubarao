@@ -6,10 +6,10 @@
 #include <string>
 
 // Substitua com as suas informações de rede Wi-Fi
-// const char* ssid = "brisa-2908314";
-// const char* password = "dqszdq8h";
-const char* ssid = "Willyan's Galaxy S20 FE";
-const char* password = "123456789";
+const char* ssid = "brisa-2908314";
+const char* password = "dqszdq8h";
+// const char* ssid = "Willyan's Galaxy S20 FE";
+// const char* password = "123456789";
 
 // Pino de entrada para verificar o nível lógico
 const int pin34 = 34;
@@ -77,7 +77,7 @@ while (WiFi.status() != WL_CONNECTED) {
     }
   }
 
-String numbers[] = {"58479826", "15489823", "58479826", "13482823", "58479826","13482823", "78591204"};
+String numbers[] = {"58479826", "15489823", "58479826", "58479826", "15489823"};
 
 for (String number : numbers) {
   sendRequest(number);
