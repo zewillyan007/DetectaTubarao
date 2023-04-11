@@ -5,11 +5,12 @@
 #include <iostream>
 #include <string>
 
+const String serialNumber = "84519-51248-69584-15039";
 // Substitua com as suas informações de rede Wi-Fi
-// const char* ssid = "brisa-2908314";
-// const char* password = "dqszdq8h";
-const char* ssid = "Willyan's Galaxy S20 FE";
-const char* password = "123456789";
+const char* ssid = "brisa-2908314";
+const char* password = "dqszdq8h";
+// const char* ssid = "Willyan's Galaxy S20 FE";
+// const char* password = "123456789";
 
 // Pino de entrada para verificar o nível lógico
 const int pin34 = 34;
@@ -40,6 +41,7 @@ void sendRequest(String chipNumber) {
   // Crie um novo objeto JSON com nome e idade
   DynamicJsonDocument jsonPayload(1024);
   jsonPayload["ChipNumber"] = chipNumber;
+  jsonPayload["MicrocontrollerSerialNumber"] = serialNumber;
   //delay(30000);
 
   // Serialize o objeto JSON como uma string
