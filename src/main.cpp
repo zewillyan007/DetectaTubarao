@@ -28,7 +28,7 @@ void setup() {
   Serial.println("Conectado ao WiFi");
 
   // Configure o pino 34 como entrada
-  pinMode(pin34, INPUT);
+  //pinMode(pin34, INPUT);
 }
 
 void sendRequest(String chipNumber) {
