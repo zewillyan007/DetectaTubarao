@@ -13,7 +13,7 @@ const char* password = "dqszdq8h";
 // const char* password = "123456789";
 
 // Pino de entrada para verificar o nível lógico
-const int pin34 = 34;
+const int pin34 = 32;
 
 void setup() {
   // Inicialize a comunicação serial
@@ -28,7 +28,8 @@ void setup() {
   Serial.println("Conectado ao WiFi");
 
   // Configure o pino 34 como entrada
-  pinMode(pin34, INPUT);
+  // pinMode(pin34, OUTPUT);
+  // digitalWrite(pin34, HIGH);
 }
 
 void sendRequest(String chipNumber) {
